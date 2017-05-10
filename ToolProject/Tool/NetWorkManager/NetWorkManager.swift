@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Alamofire
+import SVProgressHUD
 
 private let networkManager = NetWorkManager()
 
@@ -22,10 +23,14 @@ final class NetWorkManager {
 
 extension NetWorkManager {
     
-    func postRequest(urlString : String, params : [String : Any], success : @escaping (_ response : [String : AnyObject])->(), failture : @escaping (_ error : Error)->()) {
+    func postRequest(urlString : String, params : [String : Any], hud: Bool = false, type: RequsetType = .normal, success : @escaping (_ response : [String : AnyObject])->(), failture : @escaping (_ error : Error)->()) {
         
+        if hud && type == .normal {
+            SVProgressHUD.show()
+        }
         
         Alamofire.request(urlString, method: HTTPMethod.post, parameters: params).responseJSON { (response) in
+            
             switch response.result{
             case .success:
                 if let value = response.result.value as? [String: AnyObject] {
@@ -38,6 +43,9 @@ extension NetWorkManager {
                 print("error:\(error)")
             }
             
+            if hud && type == .normal {
+                SVProgressHUD.dismiss()
+            }
         }
     }
     
