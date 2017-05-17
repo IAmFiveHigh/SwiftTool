@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol CellHeaderViewDelegate: class {
+    
+    func photoBeClickWith(userID: String)
+}
+
 class CellHeaderView: UIView {
 
     //width 170
@@ -32,6 +37,10 @@ class CellHeaderView: UIView {
         photo = UIImageView()
         photo.layer.cornerRadius = 15
         photo.layer.masksToBounds = true
+        photo.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(photoClick))
+        photo.addGestureRecognizer(tap)
         addSubview(photo)
         
         name = UILabel()
@@ -63,13 +72,22 @@ class CellHeaderView: UIView {
         }
 
     }
+    
+    @objc fileprivate func photoClick() {
+        
+        
+    }
 
-    func updateUI(with name: String, image: String, time: String, dateFormate: String) {
+    func updateUI(with name: String, image: String, time: String, dateFormate: String = "") {
         
         self.photo.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "我-未选中"))
         self.name.text = name
         self.name.sizeToFit()
-        self.time.text = Date.dateDistanceWithNow(time, dateformat: dateFormate)
+        if dateFormate == "" {
+            self.time.text = time
+        }else {
+            self.time.text = Date.dateDistanceWithNow(time, dateformat: dateFormate)
+        }
     
     }
 }

@@ -8,9 +8,19 @@
 
 import UIKit
 
+protocol CellFooterDelegate:class {
+    
+    func likeButtonBeClick(model: PostCommentModel, status: String)
+    
+    func commentButtonBeClick(model: PostCommentModel)
+}
+
+
 class CellFooterView: UIView {
     //width 120
     let type: likeOrPost
+    
+    let closeLeft: Bool
     
     var commentNum: UILabel!
     
@@ -21,10 +31,31 @@ class CellFooterView: UIView {
     var likeImage: UIImageView!
     
     var postLabel: UILabel!
+
+    var model: PostCommentModel?
     
-    init(frame: CGRect, type: likeOrPost) {
+    var isFill : Bool = true
+    
+    weak var delegate: CellFooterDelegate?
+    
+    var status: Bool = false {
+        didSet {
+            
+            if status {
+                
+                likeImage.image = UIImage(named: "帖子里-已点赞")
+            }else {
+                
+                likeImage.image = UIImage(named: "帖子里-未点赞")
+            }
+        }
+    }
+    
+    init(frame: CGRect, type: likeOrPost, closeLeft: Bool = false) {
         
         self.type = type
+        
+        self.closeLeft = closeLeft
         
         super.init(frame: frame)
         
@@ -35,7 +66,7 @@ class CellFooterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate func setupUI() {
+    func setupUI() {
         
         commentNum = UILabel()
         commentNum.setUI(font: 12, textColor: "BFBFBF", typeface: .Medium)
@@ -67,37 +98,90 @@ class CellFooterView: UIView {
             addSubview(postLabel)
         }
         
-        commentNum.mas_makeConstraints { (make) in
-            make?.right.equalTo()(self.mas_right)?.with().offset()(-15)
-            make?.height.equalTo()(self.mas_height)
-            make?.top.equalTo()(self.mas_top)
-        }
-        
-        commentImage.mas_makeConstraints { (make) in
-            make?.right.equalTo()(self.commentNum.mas_left)?.with().offset()(-5)
-            make?.height.equalTo()(self.mas_height)
-            make?.top.equalTo()(self.mas_top)
-        }
-        
-        num.mas_makeConstraints { (make) in
-            make?.right.equalTo()(self.commentImage.mas_left)?.with().offset()(-15)
-            make?.height.equalTo()(self.mas_height)
-            make?.top.equalTo()(self.mas_top)
-        }
-        
-        if type == .like {
-            likeImage.mas_makeConstraints({ (make) in
-                make?.right.equalTo()(self.num.mas_left)?.with().offset()(-5)
-                make?.height.equalTo()(self.mas_height)
+        if closeLeft {
+            
+            
+            
+            if type == .like {
+                likeImage.mas_makeConstraints({ (make) in
+                    make?.left.equalTo()(self.mas_left)
+                    make?.height.equalTo()(15)
+                    make?.top.equalTo()(self.mas_top)
+                    make?.width.equalTo()(15)
+                })
+                
+                num.mas_makeConstraints { (make) in
+                    make?.left.equalTo()(self.likeImage.mas_right)?.with().offset()(5)
+                    make?.height.equalTo()(15)
+                    make?.top.equalTo()(self.mas_top)
+                }
+            }else {
+                
+                postLabel.mas_makeConstraints({ (make) in
+                    make?.left.equalTo()(self.mas_left)
+                    make?.height.equalTo()(15)
+                    make?.top.equalTo()(self.mas_top)
+                })
+                
+                num.mas_makeConstraints { (make) in
+                    make?.left.equalTo()(self.postLabel.mas_right)?.with().offset()(5)
+                    make?.height.equalTo()(15)
+                    make?.top.equalTo()(self.mas_top)
+                }
+            }
+            
+            commentImage.mas_makeConstraints { (make) in
+                make?.left.equalTo()(self.num.mas_right)?.with().offset()(15)
+                make?.height.equalTo()(15)
                 make?.top.equalTo()(self.mas_top)
-            })
+                make?.width.equalTo()(15)
+            }
+            
+            commentNum.mas_makeConstraints { (make) in
+                make?.left.equalTo()(self.commentNum.mas_right)?.with().offset()(5)
+                make?.height.equalTo()(15)
+                make?.top.equalTo()(self.mas_top)
+            }
+            
+           
+            
+            
         }else {
             
-            postLabel.mas_makeConstraints({ (make) in
-                make?.right.equalTo()(self.num.mas_left)?.with().offset()(-5)
-                make?.height.equalTo()(self.mas_height)
+            commentNum.mas_makeConstraints { (make) in
+                make?.right.equalTo()(self.mas_right)?.with().offset()(-15)
+                make?.height.equalTo()(15)
                 make?.top.equalTo()(self.mas_top)
-            })
+            }
+            
+            commentImage.mas_makeConstraints { (make) in
+                make?.right.equalTo()(self.commentNum.mas_left)?.with().offset()(-5)
+                make?.height.equalTo()(15)
+                make?.top.equalTo()(self.mas_top)
+                make?.width.equalTo()(15)
+            }
+            
+            num.mas_makeConstraints { (make) in
+                make?.right.equalTo()(self.commentImage.mas_left)?.with().offset()(-15)
+                make?.height.equalTo()(15)
+                make?.top.equalTo()(self.mas_top)
+            }
+            
+            if type == .like {
+                likeImage.mas_makeConstraints({ (make) in
+                    make?.right.equalTo()(self.num.mas_left)?.with().offset()(-5)
+                    make?.height.equalTo()(15)
+                    make?.top.equalTo()(self.mas_top)
+                    make?.width.equalTo()(15)
+                })
+            }else {
+                
+                postLabel.mas_makeConstraints({ (make) in
+                    make?.right.equalTo()(self.num.mas_left)?.with().offset()(-5)
+                    make?.height.equalTo()(15)
+                    make?.top.equalTo()(self.mas_top)
+                })
+            }
         }
     }
     
@@ -108,6 +192,16 @@ class CellFooterView: UIView {
         
         self.commentNum.sizeToFit()
         self.num.sizeToFit()
+        
+        if isFill {
+            
+            commentImage.image = UIImage(named: "直播-标题处评论数量")
+            
+            if type == .like {
+                
+                likeImage.image = UIImage(named: "点赞数量")
+            }
+        }
     }
     
     func newViews(_ view:String) {
@@ -126,9 +220,23 @@ class CellFooterView: UIView {
 
     }
     
-    enum likeOrPost {
-        case like
-        case post
+    func updateWithModel(_ model: PostCommentModel) {
+        
+        self.status = model.ZAN == "1" ? true : false
+        
+        self.model = model
+        
+        self.commentNum.text = ""
+        self.num.text = model.VIEWS
+        
+        self.commentNum.sizeToFit()
+        self.num.sizeToFit()
     }
+    
+    
 
+}
+enum likeOrPost {
+    case like
+    case post
 }
