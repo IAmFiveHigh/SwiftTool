@@ -30,3 +30,15 @@ class VerticalButton: UIButton {
     }
 
 }
+
+class HorizenButton: UIButton {
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        
+        imageView?.setX((width() - (height() + CGFloat((titleLabel?.text?.characters.count)! * 15) + 8)) / 2)
+        titleLabel?.setX((imageView?.right())! + 8)
+    }
+}
+
