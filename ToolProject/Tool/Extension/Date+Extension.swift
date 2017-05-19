@@ -20,10 +20,13 @@ extension Date {
         let dateInterval = aimDate?.timeIntervalSinceNow
         
         dateFormat.dateFormat = "MM-dd"
-        let monthString = dateFormat.string(from: aimDate!)
+        
+        guard let wrapDate = aimDate else { return dateformat }
+        
+        let monthString = dateFormat.string(from: wrapDate)
         
         dateFormat.dateFormat = "yyyy-MM-dd"
-        let yearString = dateFormat.string(from: aimDate!)
+        let yearString = dateFormat.string(from: wrapDate)
         if let dateInterval = dateInterval {
             
             let interval = dateInterval * -1
@@ -39,15 +42,20 @@ extension Date {
                 
                 let hour = Int(interval / 60 / 60)
                 return "\(hour)小时前"
-            }else if interval >= 60 * 60 * 24 && interval < 60 * 60 * 24 * 365 {
+            }else if interval >= 60 * 60 * 24 && interval < 60 * 60 * 24 * 2 {
+                
+                return "昨天"
+            }else if interval >= 60 * 60 * 24 * 2 && interval < 60 * 60 * 24 * 365 {
                 
                 return monthString
             }else {
                 
                 return yearString
             }
+        }else {
+            
+            return dateformat
         }
         
-        return "\(dateInterval.debugDescription)"
     }
 }
