@@ -43,6 +43,7 @@
 		355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */; };
 		355762041EC1BD1C0000F9F0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E41EC1BD1C0000F9F0 /* BaseModel.swift */; };
 		355762051EC1BD1C0000F9F0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */; };
+		35D7F6691ED43AA700EAC2A5 /* Device+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D7F6681ED43AA700EAC2A5 /* Device+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintModelList.swift; sourceTree = "<group>"; };
 		355761E41EC1BD1C0000F9F0 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		35D7F6681ED43AA700EAC2A5 /* Device+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 		355761D91EC1BD1C0000F9F0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				35D7F6681ED43AA700EAC2A5 /* Device+extension.swift */,
 				355761DA1EC1BD1C0000F9F0 /* bundle+extension.swift */,
 				355761DB1EC1BD1C0000F9F0 /* Date+Extension.swift */,
 				355761DC1EC1BD1C0000F9F0 /* String+Extension.swift */,
@@ -401,6 +404,7 @@
 				355761F61EC1BD1C0000F9F0 /* KeyWordLabel.swift in Sources */,
 				355761ED1EC1BD1C0000F9F0 /* CommentTextView.swift in Sources */,
 				355761FD1EC1BD1C0000F9F0 /* Date+Extension.swift in Sources */,
+				35D7F6691ED43AA700EAC2A5 /* Device+extension.swift in Sources */,
 				355761F01EC1BD1C0000F9F0 /* BaseTextField.swift in Sources */,
 				355761A51EC1BD0B0000F9F0 /* ViewController.swift in Sources */,
 				355761F21EC1BD1C0000F9F0 /* CustomNumPick.swift in Sources */,
@@ -586,6 +590,7 @@
 				355761B31EC1BD0B0000F9F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
