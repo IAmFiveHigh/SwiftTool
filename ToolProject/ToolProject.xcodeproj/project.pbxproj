@@ -44,6 +44,7 @@
 		355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */; };
 		355762041EC1BD1C0000F9F0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E41EC1BD1C0000F9F0 /* BaseModel.swift */; };
 		355762051EC1BD1C0000F9F0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */; };
+		357130CD1EE0102400CE49A8 /* LoginInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357130CC1EE0102400CE49A8 /* LoginInTextField.swift */; };
 		3583AC641EDEB2D800C8037F /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583AC611EDEB2D800C8037F /* HyLoginButton.m */; };
 		3583AC651EDEB2D800C8037F /* HySpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583AC631EDEB2D800C8037F /* HySpinerLayer.m */; };
 		35D7F6691ED43AA700EAC2A5 /* Device+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D7F6681ED43AA700EAC2A5 /* Device+extension.swift */; };
@@ -91,6 +92,7 @@
 		355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintModelList.swift; sourceTree = "<group>"; };
 		355761E41EC1BD1C0000F9F0 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		357130CC1EE0102400CE49A8 /* LoginInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInTextField.swift; sourceTree = "<group>"; };
 		3583AC601EDEB2D800C8037F /* HyLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoginButton.h; sourceTree = "<group>"; };
 		3583AC611EDEB2D800C8037F /* HyLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoginButton.m; sourceTree = "<group>"; };
 		3583AC621EDEB2D800C8037F /* HySpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HySpinerLayer.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		355761B51EC1BD1C0000F9F0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				357130CB1EE0102400CE49A8 /* LoginTextfield */,
 				3583AC5F1EDEB2D800C8037F /* HyLoginButton */,
 				35320F6F1ED67CBD00BE3032 /* AvatarImageView */,
 				355761B61EC1BD1C0000F9F0 /* AreaPickerView */,
@@ -343,6 +346,14 @@
 			path = NetWorkManager;
 			sourceTree = "<group>";
 		};
+		357130CB1EE0102400CE49A8 /* LoginTextfield */ = {
+			isa = PBXGroup;
+			children = (
+				357130CC1EE0102400CE49A8 /* LoginInTextField.swift */,
+			);
+			path = LoginTextfield;
+			sourceTree = "<group>";
+		};
 		3583AC5F1EDEB2D800C8037F /* HyLoginButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +460,7 @@
 				355761EF1EC1BD1C0000F9F0 /* SelectedButton.swift in Sources */,
 				355761FA1EC1BD1C0000F9F0 /* CoachTitleView.swift in Sources */,
 				355761F31EC1BD1C0000F9F0 /* CycleView.swift in Sources */,
+				357130CD1EE0102400CE49A8 /* LoginInTextField.swift in Sources */,
 				355762051EC1BD1C0000F9F0 /* NetWorkManager.swift in Sources */,
 				355761EE1EC1BD1C0000F9F0 /* CustomButton.swift in Sources */,
 				355762011EC1BD1C0000F9F0 /* UILabel+Extension.swift in Sources */,
