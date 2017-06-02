@@ -44,6 +44,10 @@
 		355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */; };
 		355762041EC1BD1C0000F9F0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E41EC1BD1C0000F9F0 /* BaseModel.swift */; };
 		355762051EC1BD1C0000F9F0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */; };
+		3569BBBB1EE1469800EAAF66 /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB31EE1469800EAAF66 /* HyPopMenuView.m */; };
+		3569BBBC1EE1469800EAAF66 /* PopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB61EE1469800EAAF66 /* PopMenuButton.m */; };
+		3569BBBD1EE1469800EAAF66 /* PopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB81EE1469800EAAF66 /* PopMenuModel.m */; };
+		3569BBBE1EE1469800EAAF66 /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBBA1EE1469800EAAF66 /* UIColor+ImageGetColor.m */; };
 		357130CD1EE0102400CE49A8 /* LoginInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357130CC1EE0102400CE49A8 /* LoginInTextField.swift */; };
 		3583AC641EDEB2D800C8037F /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583AC611EDEB2D800C8037F /* HyLoginButton.m */; };
 		3583AC651EDEB2D800C8037F /* HySpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583AC631EDEB2D800C8037F /* HySpinerLayer.m */; };
@@ -92,6 +96,15 @@
 		355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintModelList.swift; sourceTree = "<group>"; };
 		355761E41EC1BD1C0000F9F0 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		3569BBB21EE1469800EAAF66 /* HyPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuView.h; sourceTree = "<group>"; };
+		3569BBB31EE1469800EAAF66 /* HyPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyPopMenuView.m; sourceTree = "<group>"; };
+		3569BBB41EE1469800EAAF66 /* HyPopMenuViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuViewDelegate.h; sourceTree = "<group>"; };
+		3569BBB51EE1469800EAAF66 /* PopMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuButton.h; sourceTree = "<group>"; };
+		3569BBB61EE1469800EAAF66 /* PopMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuButton.m; sourceTree = "<group>"; };
+		3569BBB71EE1469800EAAF66 /* PopMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuModel.h; sourceTree = "<group>"; };
+		3569BBB81EE1469800EAAF66 /* PopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuModel.m; sourceTree = "<group>"; };
+		3569BBB91EE1469800EAAF66 /* UIColor+ImageGetColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageGetColor.h"; sourceTree = "<group>"; };
+		3569BBBA1EE1469800EAAF66 /* UIColor+ImageGetColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageGetColor.m"; sourceTree = "<group>"; };
 		357130CC1EE0102400CE49A8 /* LoginInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInTextField.swift; sourceTree = "<group>"; };
 		3583AC601EDEB2D800C8037F /* HyLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoginButton.h; sourceTree = "<group>"; };
 		3583AC611EDEB2D800C8037F /* HyLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoginButton.m; sourceTree = "<group>"; };
@@ -166,6 +179,7 @@
 		355761B51EC1BD1C0000F9F0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				3569BBB11EE1469800EAAF66 /* HyPopMenu */,
 				357130CB1EE0102400CE49A8 /* LoginTextfield */,
 				3583AC5F1EDEB2D800C8037F /* HyLoginButton */,
 				35320F6F1ED67CBD00BE3032 /* AvatarImageView */,
@@ -346,6 +360,22 @@
 			path = NetWorkManager;
 			sourceTree = "<group>";
 		};
+		3569BBB11EE1469800EAAF66 /* HyPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3569BBB21EE1469800EAAF66 /* HyPopMenuView.h */,
+				3569BBB31EE1469800EAAF66 /* HyPopMenuView.m */,
+				3569BBB41EE1469800EAAF66 /* HyPopMenuViewDelegate.h */,
+				3569BBB51EE1469800EAAF66 /* PopMenuButton.h */,
+				3569BBB61EE1469800EAAF66 /* PopMenuButton.m */,
+				3569BBB71EE1469800EAAF66 /* PopMenuModel.h */,
+				3569BBB81EE1469800EAAF66 /* PopMenuModel.m */,
+				3569BBB91EE1469800EAAF66 /* UIColor+ImageGetColor.h */,
+				3569BBBA1EE1469800EAAF66 /* UIColor+ImageGetColor.m */,
+			);
+			path = HyPopMenu;
+			sourceTree = "<group>";
+		};
 		357130CB1EE0102400CE49A8 /* LoginTextfield */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +484,7 @@
 				355761F01EC1BD1C0000F9F0 /* BaseTextField.swift in Sources */,
 				355761A51EC1BD0B0000F9F0 /* ViewController.swift in Sources */,
 				3583AC641EDEB2D800C8037F /* HyLoginButton.m in Sources */,
+				3569BBBD1EE1469800EAAF66 /* PopMenuModel.m in Sources */,
 				355761F21EC1BD1C0000F9F0 /* CustomNumPick.swift in Sources */,
 				355761F11EC1BD1C0000F9F0 /* CustomTextfield.swift in Sources */,
 				355761EC1EC1BD1C0000F9F0 /* BaseTextView.swift in Sources */,
@@ -462,7 +493,9 @@
 				355761F31EC1BD1C0000F9F0 /* CycleView.swift in Sources */,
 				357130CD1EE0102400CE49A8 /* LoginInTextField.swift in Sources */,
 				355762051EC1BD1C0000F9F0 /* NetWorkManager.swift in Sources */,
+				3569BBBE1EE1469800EAAF66 /* UIColor+ImageGetColor.m in Sources */,
 				355761EE1EC1BD1C0000F9F0 /* CustomButton.swift in Sources */,
+				3569BBBC1EE1469800EAAF66 /* PopMenuButton.m in Sources */,
 				355762011EC1BD1C0000F9F0 /* UILabel+Extension.swift in Sources */,
 				355761FE1EC1BD1C0000F9F0 /* String+Extension.swift in Sources */,
 				355761F91EC1BD1C0000F9F0 /* CoachContentView.swift in Sources */,
@@ -474,6 +507,7 @@
 				355761EB1EC1BD1C0000F9F0 /* Location.swift in Sources */,
 				355761F41EC1BD1C0000F9F0 /* CellFooterView.swift in Sources */,
 				355762001EC1BD1C0000F9F0 /* UIColor+Extension.swift in Sources */,
+				3569BBBB1EE1469800EAAF66 /* HyPopMenuView.m in Sources */,
 				3583AC651EDEB2D800C8037F /* HySpinerLayer.m in Sources */,
 				355761E91EC1BD1C0000F9F0 /* AreaPickerView.swift in Sources */,
 				355761A31EC1BD0B0000F9F0 /* AppDelegate.swift in Sources */,
