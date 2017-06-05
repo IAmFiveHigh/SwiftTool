@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35320F721ED67CBD00BE3032 /* AvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35320F711ED67CBD00BE3032 /* AvatarImageView.m */; };
+		3543C7561EE56D69007813E9 /* ZipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3543C7551EE56D69007813E9 /* ZipImage.m */; };
 		355761A31EC1BD0B0000F9F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761A21EC1BD0B0000F9F0 /* AppDelegate.swift */; };
 		355761A51EC1BD0B0000F9F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761A41EC1BD0B0000F9F0 /* ViewController.swift */; };
 		355761A81EC1BD0B0000F9F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355761A61EC1BD0B0000F9F0 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		35320F701ED67CBD00BE3032 /* AvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarImageView.h; sourceTree = "<group>"; };
 		35320F711ED67CBD00BE3032 /* AvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarImageView.m; sourceTree = "<group>"; };
+		3543C7541EE56D69007813E9 /* ZipImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipImage.h; sourceTree = "<group>"; };
+		3543C7551EE56D69007813E9 /* ZipImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipImage.m; sourceTree = "<group>"; };
 		3557619F1EC1BD0B0000F9F0 /* ToolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355761A21EC1BD0B0000F9F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		355761A41EC1BD0B0000F9F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +137,15 @@
 			path = AvatarImageView;
 			sourceTree = "<group>";
 		};
+		3543C7531EE56D69007813E9 /* ZipImage */ = {
+			isa = PBXGroup;
+			children = (
+				3543C7541EE56D69007813E9 /* ZipImage.h */,
+				3543C7551EE56D69007813E9 /* ZipImage.m */,
+			);
+			path = ZipImage;
+			sourceTree = "<group>";
+		};
 		355761961EC1BD0B0000F9F0 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +179,7 @@
 		355761B41EC1BD1C0000F9F0 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				3543C7531EE56D69007813E9 /* ZipImage */,
 				355761B51EC1BD1C0000F9F0 /* CustomView */,
 				355761D91EC1BD1C0000F9F0 /* Extension */,
 				355761E11EC1BD1C0000F9F0 /* Help */,
@@ -497,6 +510,7 @@
 				355761EE1EC1BD1C0000F9F0 /* CustomButton.swift in Sources */,
 				3569BBBC1EE1469800EAAF66 /* PopMenuButton.m in Sources */,
 				355762011EC1BD1C0000F9F0 /* UILabel+Extension.swift in Sources */,
+				3543C7561EE56D69007813E9 /* ZipImage.m in Sources */,
 				355761FE1EC1BD1C0000F9F0 /* String+Extension.swift in Sources */,
 				355761F91EC1BD1C0000F9F0 /* CoachContentView.swift in Sources */,
 				355761F71EC1BD1C0000F9F0 /* PriceLabel.swift in Sources */,
