@@ -52,6 +52,7 @@
 		357130CD1EE0102400CE49A8 /* LoginInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357130CC1EE0102400CE49A8 /* LoginInTextField.swift */; };
 		3583AC641EDEB2D800C8037F /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583AC611EDEB2D800C8037F /* HyLoginButton.m */; };
 		3583AC651EDEB2D800C8037F /* HySpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3583AC631EDEB2D800C8037F /* HySpinerLayer.m */; };
+		35A52DB81EEA8651009DAC61 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A52DB71EEA8651009DAC61 /* UIImage + Extension.swift */; };
 		35D7F6691ED43AA700EAC2A5 /* Device+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D7F6681ED43AA700EAC2A5 /* Device+extension.swift */; };
 		35FAC9491ED80971004E9FBA /* Int+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FAC9481ED80971004E9FBA /* Int+extension.swift */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,7 @@
 		3583AC611EDEB2D800C8037F /* HyLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoginButton.m; sourceTree = "<group>"; };
 		3583AC621EDEB2D800C8037F /* HySpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HySpinerLayer.h; sourceTree = "<group>"; };
 		3583AC631EDEB2D800C8037F /* HySpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HySpinerLayer.m; sourceTree = "<group>"; };
+		35A52DB71EEA8651009DAC61 /* UIImage + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		35D7F6681ED43AA700EAC2A5 /* Device+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+extension.swift"; sourceTree = "<group>"; };
 		35FAC9481ED80971004E9FBA /* Int+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +347,7 @@
 				355761DE1EC1BD1C0000F9F0 /* UIColor+Extension.swift */,
 				355761DF1EC1BD1C0000F9F0 /* UILabel+Extension.swift */,
 				355761E01EC1BD1C0000F9F0 /* UIView+Extension.swift */,
+				35A52DB71EEA8651009DAC61 /* UIImage + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				355761EA1EC1BD1C0000F9F0 /* AreaToolbar.swift in Sources */,
 				35320F721ED67CBD00BE3032 /* AvatarImageView.m in Sources */,
 				355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */,
+				35A52DB81EEA8651009DAC61 /* UIImage + Extension.swift in Sources */,
 				355761F51EC1BD1C0000F9F0 /* CellHeaderView.swift in Sources */,
 				355761FF1EC1BD1C0000F9F0 /* UIBarButtonItem+Extension.swift in Sources */,
 				355761FB1EC1BD1C0000F9F0 /* VerticalButton.swift in Sources */,
