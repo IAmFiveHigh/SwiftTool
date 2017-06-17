@@ -41,6 +41,15 @@ extension NetWorkManager {
             case .failure(let error):
                 failture(error)
                 print("error:\(error)")
+                
+                let host = NetworkReachabilityManager(host: "www.baidu.com")
+                host?.startListening()
+                
+                if host?.networkReachabilityStatus == .notReachable {
+                    SVProgressHUD.showError(withStatus: "请检查网络连接")
+                }else {
+                    SVProgressHUD.showError(withStatus: "后台小哥忙不过来了，请联系管理员")
+                }
             }
             
             if hud && type == .normal {
