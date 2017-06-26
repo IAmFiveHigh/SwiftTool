@@ -14,7 +14,7 @@ protocol NumPickDelegate: class {
 }
 
 class CustomNumPick: UIView {
-
+    
     var minNum: Int {
         didSet {
             num = minNum
@@ -27,14 +27,29 @@ class CustomNumPick: UIView {
         didSet {
             if num < minNum {
                 num = minNum
+                shakeAnimationFunc()
             }
             
             middleLabel.text = "\(num)"
             
-            if let delegate = delegate {
-                delegate.pickNumber(num: num)
-            }
         }
+    }
+    
+    // MARK: - 抖动动画
+    fileprivate func shakeAnimationFunc() {
+        let animation = CAKeyframeAnimation.init(keyPath: "position.x")
+        //获取当前View的position坐标
+        let positionX = layer.position.x
+        //设置抖动的范围
+        animation.values = [(positionX-10),(positionX),(positionX+10)]
+        //动画重复的次数
+        animation.repeatCount = 3
+        //动画时间
+        animation.duration = 0.07
+        //设置自动反转
+        animation.autoreverses = true
+        //将动画添加到layer
+        layer.add(animation, forKey: nil)
     }
     
     fileprivate var leftButton: UIButton!
@@ -99,15 +114,21 @@ class CustomNumPick: UIView {
     
     @objc fileprivate func leftButtonClick() {
         num -= 1
+        if let delegate = delegate {
+            delegate.pickNumber(num: num)
+        }
     }
     
     @objc fileprivate func rightButtonClick() {
         num += 1
+        if let delegate = delegate {
+            delegate.pickNumber(num: num)
+        }
     }
     
     func setMin(_ num: Int) {
         
         minNum = num
     }
-
+    
 }
