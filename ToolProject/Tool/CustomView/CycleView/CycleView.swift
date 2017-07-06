@@ -7,20 +7,23 @@
 //
 
 import UIKit
-import SDWebImage
+protocol CycleViewDelegate: class {
+    
+    func imageViewBeClickWithTag(_ tag: Int)
+}
 
 class CycleView: UIView {
     
     fileprivate var imageArray: [String]?
     
+    fileprivate let page = UIPageControl()
+    
     fileprivate var timer: Timer?
     
     fileprivate var index: Int = 1
     
-    fileprivate let page = UIPageControl()
-    
     fileprivate lazy var scrollView: UIScrollView = {
-       
+        
         let scrollView = UIScrollView(frame: CGRect.zero)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
@@ -29,6 +32,8 @@ class CycleView: UIView {
         scrollView.scrollsToTop = false
         return scrollView
     }()
+    
+    weak var delegate: CycleViewDelegate?
     
     //MARK: 操作数组
     fileprivate func operateArray() {
@@ -52,9 +57,19 @@ class CycleView: UIView {
             
             let imageView = UIImageView(frame: bounds)
             imageView.setX(CGFloat(index) * width())
-            imageView.sd_setImage(with: URL(string: imageName)!)
+            imageView.contentMode = .scaleAspectFit
+            imageView.layer.masksToBounds = true
+            imageView.sd_setImage(with: URL(string: imageName))
             scrollView.addSubview(imageView)
+            
+            let button = UIButton(frame: bounds)
+            button.setX(CGFloat(index) * width())
+            button.tag = index
+            button.addTarget(self, action: #selector(buttonClick(sender:)), for: .touchUpInside)
+            scrollView.addSubview(button)
         }
+        
+        
         
         //3 设定scrollView起始offset
         scrollView.contentOffset = CGPoint(x: width(), y: 0)
@@ -62,10 +77,29 @@ class CycleView: UIView {
         addSubview(scrollView)
     }
     
-    //MARK: 创建timer
-    fileprivate func createTimer() {
+    @objc fileprivate func buttonClick(sender: UIButton) {
         
-        timer = Timer(timeInterval: 2.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        var tagIndex = sender.tag
+        
+        if sender.tag == 0 {
+            tagIndex = (imageArray?.count)! - 2
+        }else if sender.tag == (imageArray?.count)! - 1 {
+            tagIndex = 0
+        }else {
+            tagIndex -= 1
+        }
+        
+        
+        if let delegate = delegate {
+            delegate.imageViewBeClickWithTag(tagIndex)
+        }
+    }
+    
+    //MARK: 创建timer
+    fileprivate func createTimer(timerIntervar: TimeInterval) {
+        
+        
+        timer = Timer(timeInterval: timerIntervar, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         RunLoop.current.add(timer!, forMode: RunLoopMode.commonModes)
         timer?.fire()
@@ -84,6 +118,7 @@ class CycleView: UIView {
         
     }
     
+    //MARK: - 创建pageControl
     fileprivate func createPageControl() {
         
         page.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
@@ -94,18 +129,15 @@ class CycleView: UIView {
         addSubview(page)
     }
     
+    
 }
 
 extension CycleView {
     
     //MARK: - 外部方法
-    func setImageArray(_ imageArray:[String]?) {
+    func setImageArray(_ imageArray:[String]?, timeIntervar: TimeInterval = 6) {
         
         guard let imageArray = imageArray else {
-            return
-        }
-        
-        guard imageArray.count > 0 else {
             return
         }
         self.imageArray = imageArray
@@ -116,8 +148,10 @@ extension CycleView {
         
         createPageControl()
         
-        createTimer()
+        createTimer(timerIntervar: timeIntervar)
     }
+    
+    
 }
 
 extension CycleView: UIScrollViewDelegate {
@@ -151,6 +185,7 @@ extension CycleView: UIScrollViewDelegate {
         }
         
     }
-
+    
 }
+
 
