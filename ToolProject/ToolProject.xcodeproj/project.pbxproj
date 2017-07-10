@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35320F721ED67CBD00BE3032 /* AvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35320F711ED67CBD00BE3032 /* AvatarImageView.m */; };
 		3543C7561EE56D69007813E9 /* ZipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3543C7551EE56D69007813E9 /* ZipImage.m */; };
+		3546AE6A1F13779D008CB110 /* AdjustBothMarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546AE691F13779D008CB110 /* AdjustBothMarginLabel.swift */; };
 		355761A31EC1BD0B0000F9F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761A21EC1BD0B0000F9F0 /* AppDelegate.swift */; };
 		355761A51EC1BD0B0000F9F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761A41EC1BD0B0000F9F0 /* ViewController.swift */; };
 		355761A81EC1BD0B0000F9F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355761A61EC1BD0B0000F9F0 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 		35320F711ED67CBD00BE3032 /* AvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarImageView.m; sourceTree = "<group>"; };
 		3543C7541EE56D69007813E9 /* ZipImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipImage.h; sourceTree = "<group>"; };
 		3543C7551EE56D69007813E9 /* ZipImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipImage.m; sourceTree = "<group>"; };
+		3546AE691F13779D008CB110 /* AdjustBothMarginLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustBothMarginLabel.swift; sourceTree = "<group>"; };
 		3557619F1EC1BD0B0000F9F0 /* ToolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355761A21EC1BD0B0000F9F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		355761A41EC1BD0B0000F9F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,14 @@
 			path = ZipImage;
 			sourceTree = "<group>";
 		};
+		3546AE681F13779D008CB110 /* AdjustBothMarginLabel */ = {
+			isa = PBXGroup;
+			children = (
+				3546AE691F13779D008CB110 /* AdjustBothMarginLabel.swift */,
+			);
+			path = AdjustBothMarginLabel;
+			sourceTree = "<group>";
+		};
 		355761961EC1BD0B0000F9F0 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +241,7 @@
 		355761B51EC1BD1C0000F9F0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				3546AE681F13779D008CB110 /* AdjustBothMarginLabel */,
 				3582D0321F0DD37F00E6B45B /* SwiftTagsView */,
 				3569BBB11EE1469800EAAF66 /* HyPopMenu */,
 				357130CB1EE0102400CE49A8 /* LoginTextfield */,
@@ -575,6 +586,7 @@
 			files = (
 				355761EA1EC1BD1C0000F9F0 /* AreaToolbar.swift in Sources */,
 				3573EBDC1EFA4D2B00BB22F2 /* ESTabBarController.swift in Sources */,
+				3546AE6A1F13779D008CB110 /* AdjustBothMarginLabel.swift in Sources */,
 				35320F721ED67CBD00BE3032 /* AvatarImageView.m in Sources */,
 				355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */,
 				35A52DB81EEA8651009DAC61 /* UIImage + Extension.swift in Sources */,
