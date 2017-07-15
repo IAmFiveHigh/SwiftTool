@@ -18,7 +18,7 @@ class CycleView: UIView {
     
     fileprivate let page = UIPageControl()
     
-    fileprivate var timer: Timer?
+    var timer: Timer?
     
     fileprivate var index: Int = 1
     
