@@ -148,7 +148,10 @@ extension CycleView {
         
         createPageControl()
         
-        createTimer(timerIntervar: timeIntervar)
+        // 延迟几秒再第一次轮播
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + timeIntervar) {
+            self.createTimer(timerIntervar: timeIntervar)
+        }
     }
     
     
