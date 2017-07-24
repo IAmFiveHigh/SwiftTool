@@ -11,15 +11,22 @@ import UIKit
 protocol CoachTitleViewDelegate: class {
     
     func coachTitleView(_ titleView: CoachTitleView, selectIndex: Int)
-
+    
 }
 
-//MARK: 定义属性
-private let kScrollLineH: CGFloat = 1
-private let kNormalColor: (CGFloat, CGFloat, CGFloat) = (54, 54, 54)
-private let kSelectColor: (CGFloat, CGFloat, CGFloat) = (74, 194, 245)
-
 class CoachTitleView: UIView {
+    
+    //MARK: 定义属性
+    var kScrollLineH: CGFloat = 1
+    var KScrollLineW: CGFloat = 0 {
+        didSet {
+            let center = scrollLine.center
+            scrollLine.setWidth(KScrollLineW)
+            scrollLine.center = center
+        }
+    }
+    private let kNormalColor: (CGFloat, CGFloat, CGFloat) = (54, 54, 54)
+    private let kSelectColor: (CGFloat, CGFloat, CGFloat) = (74, 194, 245)
     
     fileprivate var currentIndex: Int = 0
     
@@ -39,7 +46,7 @@ class CoachTitleView: UIView {
     }()
     
     fileprivate lazy var scrollLine: UIView = {
-       
+        
         let scrollLine = UIView()
         scrollLine.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         return scrollLine
@@ -57,7 +64,7 @@ class CoachTitleView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
 }
 
 extension CoachTitleView {
@@ -110,7 +117,7 @@ extension CoachTitleView {
         guard let firstButton = titleButtons.first else { return }
         
         scrollView.addSubview(scrollLine)
-        scrollLine.frame = CGRect(x: 0, y: height() - kScrollLineH * 2, width: firstButton.width(), height: kScrollLineH * 2)
+        scrollLine.frame = CGRect(x: 0, y: height() - kScrollLineH * 2, width: (KScrollLineW == 0 ? firstButton.width() : KScrollLineW), height: kScrollLineH * 2)
         scrollLine.setCenterX(firstButton.centerX())
         
         addSubview(scrollView)
