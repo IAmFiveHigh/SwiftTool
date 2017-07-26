@@ -29,6 +29,13 @@ extension UIView {
         return view
     }
     
+    static func bgLine(with colorText: String, width: CGFloat, to superView: UIView) -> UIView {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexColor: colorText)
+        superView.addSubview(view)
+        return view
+    }
+    
     //size
     func viewSize() -> CGSize {
         return frame.size

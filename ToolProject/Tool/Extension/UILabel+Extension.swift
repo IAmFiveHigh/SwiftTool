@@ -22,7 +22,7 @@ import UIKit
 
 extension UILabel {
     
-    func setUI(font: CGFloat, textColor: String, typeface: TypeFace) {
+    func setUI(font: CGFloat, textColor: String, typeface: TypeFace = .Medium) {
         
         self.textColor = UIColor(hexColor: textColor)
         if typeface == .Bold {

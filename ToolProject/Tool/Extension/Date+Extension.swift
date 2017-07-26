@@ -10,7 +10,7 @@ import Foundation
 
 extension Date {
     
-    static func dateDistanceWithNow(_ date: String, dateformat: String) -> String {
+    static func dateDistanceWithNow(_ date: String, dateformat: String = "yyyy-MM-dd HH:mm:ss") -> String {
         
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = dateformat
