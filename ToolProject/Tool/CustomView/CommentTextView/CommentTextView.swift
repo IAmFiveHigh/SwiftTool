@@ -8,6 +8,9 @@
 
 import UIKit
 
+//评论框的高度
+let commentTextView_textViewHeight:CGFloat = 37
+
 protocol CommentTextViewDelegate: class {
     
     func submit(text: String)
@@ -16,12 +19,15 @@ protocol CommentTextViewDelegate: class {
 }
 
 class CommentTextView: UIView {
-
+    
     var hasImage: Bool
     
     var textView: UITextView!
     
     var submitButton: UIButton!
+    
+    var textViewLabel: UILabel!
+    
     
     weak var delegate: CommentTextViewDelegate?
     
@@ -31,7 +37,8 @@ class CommentTextView: UIView {
         
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor(hexColor: "F5F5F5")
+        
         
         setupUI()
     }
@@ -43,21 +50,26 @@ class CommentTextView: UIView {
     fileprivate func setupUI() {
         
         submitButton = UIButton()
-        submitButton.setupUI(font: 17, title: "发送", textColor: "1A1A1A", backColor: "F5F5F5")
+        submitButton.setupUI(font: 17, title: "发送", textColor: "1A1A1A", backColor: "FAFAFA")
         submitButton.layer.cornerRadius = 2
         submitButton.layer.borderColor = UIColor(hexColor: "DCDCDC").cgColor
-        submitButton.layer.borderWidth = 0.3
+        submitButton.layer.borderWidth = 1
         submitButton.addTarget(self, action: #selector(submit))
         addSubview(submitButton)
         
         textView = UITextView()
         textView.delegate = self
         
-        textView.font = UIFont.systemFont(ofSize: 15)
+        textView.font = UIFont.systemFont(ofSize: 17)
         textView.textColor = UIColor(hexColor: "1A1A1A")
         textView.layer.borderColor = UIColor(hexColor: "DCDCDC").cgColor
-        textView.layer.borderWidth = 0.3
+        textView.layer.borderWidth = 1
         addSubview(textView)
+        
+        textViewLabel = UILabel()
+        textViewLabel.setUI(font: 17, textColor: "E6E6E6", typeface: .Medium)
+        textViewLabel.text = ""
+        addSubview(textViewLabel)
         
         submitButton.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.mas_top)?.with().offset()(8)
@@ -72,6 +84,13 @@ class CommentTextView: UIView {
             make?.bottom.equalTo()(self.mas_bottom)?.with().offset()(-8)
         }
         
+        textViewLabel.mas_makeConstraints { (make) in
+            make?.centerY.equalTo()(self.textView)
+            make?.left.equalTo()(self.textView)?.with().offset()(15)
+            make?.right.equalTo()(self.textView)
+            make?.height.equalTo()(17)
+        }
+        
         if hasImage {
             
             
@@ -84,7 +103,7 @@ class CommentTextView: UIView {
             delegate.submit(text: textView.text)
         }
     }
-
+    
 }
 
 
@@ -94,11 +113,15 @@ extension CommentTextView: UITextViewDelegate {
         
         textView.flashScrollIndicators()
         
-        let maxHeight:CGFloat = 150
+        let maxHeight:CGFloat = 120
+        let minHeight:CGFloat = commentTextView_textViewHeight
         let constraintSize = CGSize(width: textView.width(), height: screenHeight)
         var size = textView.sizeThatFits(constraintSize)
-        
-        if size.height >= maxHeight  {
+        if size.height <= minHeight {
+            
+            size.height = minHeight
+            textView.isScrollEnabled = false
+        }else if size.height >= maxHeight  {
             
             size.height = maxHeight
             textView.isScrollEnabled  = true
@@ -110,9 +133,24 @@ extension CommentTextView: UITextViewDelegate {
         textView.setHeight(size.height)
         
         if let delegate = delegate {
-            delegate.rise(number: size.height - 30)
+            delegate.rise(number: size.height - commentTextView_textViewHeight)
         }
         
         textView.layoutIfNeeded()
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        if text != "" {
+            
+            textViewLabel.isHidden = true
+        }
+        
+        if text == "" && range.location == 0 && range.length == 1 {
+            
+            textViewLabel.isHidden = false
+        }
+        return true
+    }
+    
 }
