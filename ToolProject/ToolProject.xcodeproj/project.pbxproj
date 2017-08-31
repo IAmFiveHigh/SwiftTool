@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35320F721ED67CBD00BE3032 /* AvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35320F711ED67CBD00BE3032 /* AvatarImageView.m */; };
+		35339F071F57FCAA0091B90A /* YSZoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35339F061F57FCAA0091B90A /* YSZoomView.swift */; };
 		3543C7561EE56D69007813E9 /* ZipImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3543C7551EE56D69007813E9 /* ZipImage.m */; };
 		3546AE6A1F13779D008CB110 /* AdjustBothMarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546AE691F13779D008CB110 /* AdjustBothMarginLabel.swift */; };
 		355761A31EC1BD0B0000F9F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761A21EC1BD0B0000F9F0 /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 /* Begin PBXFileReference section */
 		35320F701ED67CBD00BE3032 /* AvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarImageView.h; sourceTree = "<group>"; };
 		35320F711ED67CBD00BE3032 /* AvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarImageView.m; sourceTree = "<group>"; };
+		35339F061F57FCAA0091B90A /* YSZoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSZoomView.swift; sourceTree = "<group>"; };
 		3543C7541EE56D69007813E9 /* ZipImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipImage.h; sourceTree = "<group>"; };
 		3543C7551EE56D69007813E9 /* ZipImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipImage.m; sourceTree = "<group>"; };
 		3546AE691F13779D008CB110 /* AdjustBothMarginLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustBothMarginLabel.swift; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 			path = AvatarImageView;
 			sourceTree = "<group>";
 		};
+		35339F051F57FCAA0091B90A /* ZoomView */ = {
+			isa = PBXGroup;
+			children = (
+				35339F061F57FCAA0091B90A /* YSZoomView.swift */,
+			);
+			path = ZoomView;
+			sourceTree = "<group>";
+		};
 		3543C7531EE56D69007813E9 /* ZipImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +251,7 @@
 		355761B51EC1BD1C0000F9F0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				35339F051F57FCAA0091B90A /* ZoomView */,
 				3546AE681F13779D008CB110 /* AdjustBothMarginLabel */,
 				3582D0321F0DD37F00E6B45B /* SwiftTagsView */,
 				3569BBB11EE1469800EAAF66 /* HyPopMenu */,
@@ -607,6 +618,7 @@
 				355761A51EC1BD0B0000F9F0 /* ViewController.swift in Sources */,
 				3583AC641EDEB2D800C8037F /* HyLoginButton.m in Sources */,
 				3569BBBD1EE1469800EAAF66 /* PopMenuModel.m in Sources */,
+				35339F071F57FCAA0091B90A /* YSZoomView.swift in Sources */,
 				355761F21EC1BD1C0000F9F0 /* CustomNumPick.swift in Sources */,
 				3573EBE11EFA4D2B00BB22F2 /* ESTabBarItemMoreContentView.swift in Sources */,
 				3573EBDB1EFA4D2B00BB22F2 /* ESTabBar.swift in Sources */,
