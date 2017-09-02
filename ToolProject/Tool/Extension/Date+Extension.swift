@@ -42,10 +42,7 @@ extension Date {
                 
                 let hour = Int(interval / 60 / 60)
                 return "\(hour)小时前"
-            }else if interval >= 60 * 60 * 24 && interval < 60 * 60 * 24 * 2 {
-                
-                return "昨天"
-            }else if interval >= 60 * 60 * 24 * 2 && interval < 60 * 60 * 24 * 365 {
+            }else if interval >= 60 * 60 * 24 && interval < 60 * 60 * 24 * 365 {
                 
                 return monthString
             }else {
