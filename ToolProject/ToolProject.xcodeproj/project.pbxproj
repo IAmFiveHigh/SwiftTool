@@ -51,6 +51,7 @@
 		3569BBBC1EE1469800EAAF66 /* PopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB61EE1469800EAAF66 /* PopMenuButton.m */; };
 		3569BBBD1EE1469800EAAF66 /* PopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB81EE1469800EAAF66 /* PopMenuModel.m */; };
 		3569BBBE1EE1469800EAAF66 /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBBA1EE1469800EAAF66 /* UIColor+ImageGetColor.m */; };
+		356B6A701FA32D7E00BB4D5A /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6A6F1FA32D7E00BB4D5A /* CGFloat+Extension.swift */; };
 		357130CD1EE0102400CE49A8 /* LoginInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357130CC1EE0102400CE49A8 /* LoginInTextField.swift */; };
 		3573EBD31EFA4D2B00BB22F2 /* ExampleAnimateTipsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573EBC21EFA4D2B00BB22F2 /* ExampleAnimateTipsContentView.swift */; };
 		3573EBD41EFA4D2B00BB22F2 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573EBC31EFA4D2B00BB22F2 /* ExampleBackgroundContentView.swift */; };
@@ -131,6 +132,7 @@
 		3569BBB81EE1469800EAAF66 /* PopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuModel.m; sourceTree = "<group>"; };
 		3569BBB91EE1469800EAAF66 /* UIColor+ImageGetColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageGetColor.h"; sourceTree = "<group>"; };
 		3569BBBA1EE1469800EAAF66 /* UIColor+ImageGetColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageGetColor.m"; sourceTree = "<group>"; };
+		356B6A6F1FA32D7E00BB4D5A /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		357130CC1EE0102400CE49A8 /* LoginInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInTextField.swift; sourceTree = "<group>"; };
 		3573EBC21EFA4D2B00BB22F2 /* ExampleAnimateTipsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAnimateTipsContentView.swift; sourceTree = "<group>"; };
 		3573EBC31EFA4D2B00BB22F2 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 		355761D91EC1BD1C0000F9F0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				356B6A6F1FA32D7E00BB4D5A /* CGFloat+Extension.swift */,
 				3581CBEB1EF7DF17000EDCBF /* UIImage+Extension.swift */,
 				3581CBEC1EF7DF17000EDCBF /* UITabbar+Extension.swift */,
 				35FAC9481ED80971004E9FBA /* Int+extension.swift */,
@@ -600,6 +603,7 @@
 				3546AE6A1F13779D008CB110 /* AdjustBothMarginLabel.swift in Sources */,
 				35320F721ED67CBD00BE3032 /* AvatarImageView.m in Sources */,
 				355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */,
+				356B6A701FA32D7E00BB4D5A /* CGFloat+Extension.swift in Sources */,
 				35A52DB81EEA8651009DAC61 /* UIImage + Extension.swift in Sources */,
 				355761F51EC1BD1C0000F9F0 /* CellHeaderView.swift in Sources */,
 				3573EBD91EFA4D2B00BB22F2 /* ExampleTipsContentView.swift in Sources */,
