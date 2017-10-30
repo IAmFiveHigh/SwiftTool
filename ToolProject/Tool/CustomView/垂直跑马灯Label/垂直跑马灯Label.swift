@@ -10,6 +10,7 @@ import UIKit
 
 class 垂直跑马灯Label: UIView {
     
+    //目前只能解决 1个 和三个以上数据源
     private var timer: Timer?
     
     var 数据源数组 = [String]() {
