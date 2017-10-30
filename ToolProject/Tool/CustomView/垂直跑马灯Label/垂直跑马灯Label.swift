@@ -9,7 +9,7 @@
 import UIKit
 
 class 垂直跑马灯Label: UIView {
-
+    
     private var timer: Timer?
     
     var 数据源数组 = [String]() {
@@ -20,7 +20,7 @@ class 垂直跑马灯Label: UIView {
                 for (index, label) in labelArray.enumerated() {
                     label.text = 数据源数组[index]
                 }
-                    
+                
                 
                 createTimer(timerIntervar: 5)
             }else {
@@ -51,7 +51,7 @@ class 垂直跑马灯Label: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupUI() {
         
         label1.frame = CGRect(x: 0, y: -self.height(), width: self.width(), height: self.height())
@@ -64,6 +64,9 @@ class 垂直跑马灯Label: UIView {
         label1.setUI(font: font, textColor: color)
         label2.setUI(font: font, textColor: color)
         label3.setUI(font: font, textColor: color)
+        addSubview(label1)
+        addSubview(label2)
+        addSubview(label3)
     }
     
     //MARK: 创建timer
@@ -91,16 +94,18 @@ class 垂直跑马灯Label: UIView {
                 })
             }
             
-            swap(&labelArray[0], &labelArray[1])
-            swap(&labelArray[1], &labelArray[2])
-            
-            if indexRow == 数据源数组.count - 1 {
-                indexRow = 0
-            }else {
-                indexRow += 1
-            }
-            
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            swap(&self.labelArray[0], &self.labelArray[1])
+            swap(&self.labelArray[1], &self.labelArray[2])
+            if self.indexRow == self.数据源数组.count - 1 {
+                self.indexRow = 2
+            }else {
+                self.indexRow += 1
+            }
+        }
+        
     }
     
 }
