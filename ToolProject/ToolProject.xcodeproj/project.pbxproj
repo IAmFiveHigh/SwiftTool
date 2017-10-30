@@ -68,6 +68,7 @@
 		3573EBDF1EFA4D2B00BB22F2 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573EBD01EFA4D2B00BB22F2 /* ESTabBarItemContainer.swift */; };
 		3573EBE01EFA4D2B00BB22F2 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573EBD11EFA4D2B00BB22F2 /* ESTabBarItemContentView.swift */; };
 		3573EBE11EFA4D2B00BB22F2 /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573EBD21EFA4D2B00BB22F2 /* ESTabBarItemMoreContentView.swift */; };
+		35784F381FA6CE1600CFBA32 /* 垂直跑马灯Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35784F371FA6CE1600CFBA32 /* 垂直跑马灯Label.swift */; };
 		3581CBED1EF7DF17000EDCBF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581CBEB1EF7DF17000EDCBF /* UIImage+Extension.swift */; };
 		3581CBEE1EF7DF17000EDCBF /* UITabbar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581CBEC1EF7DF17000EDCBF /* UITabbar+Extension.swift */; };
 		3582D0341F0DD37F00E6B45B /* AutoBrTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582D0331F0DD37F00E6B45B /* AutoBrTagsView.swift */; };
@@ -149,6 +150,7 @@
 		3573EBD01EFA4D2B00BB22F2 /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContainer.swift; sourceTree = "<group>"; };
 		3573EBD11EFA4D2B00BB22F2 /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContentView.swift; sourceTree = "<group>"; };
 		3573EBD21EFA4D2B00BB22F2 /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		35784F371FA6CE1600CFBA32 /* 垂直跑马灯Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "垂直跑马灯Label.swift"; sourceTree = "<group>"; };
 		3581CBEB1EF7DF17000EDCBF /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3581CBEC1EF7DF17000EDCBF /* UITabbar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabbar+Extension.swift"; sourceTree = "<group>"; };
 		3582D0331F0DD37F00E6B45B /* AutoBrTagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoBrTagsView.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		355761B51EC1BD1C0000F9F0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				35784F361FA6CE1600CFBA32 /* 垂直跑马灯Label */,
 				35339F051F57FCAA0091B90A /* ZoomView */,
 				3546AE681F13779D008CB110 /* AdjustBothMarginLabel */,
 				3582D0321F0DD37F00E6B45B /* SwiftTagsView */,
@@ -503,6 +506,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		35784F361FA6CE1600CFBA32 /* 垂直跑马灯Label */ = {
+			isa = PBXGroup;
+			children = (
+				35784F371FA6CE1600CFBA32 /* 垂直跑马灯Label.swift */,
+			);
+			path = "垂直跑马灯Label";
+			sourceTree = "<group>";
+		};
 		3582D0321F0DD37F00E6B45B /* SwiftTagsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +654,7 @@
 				3543C7561EE56D69007813E9 /* ZipImage.m in Sources */,
 				355761FE1EC1BD1C0000F9F0 /* String+Extension.swift in Sources */,
 				355761F91EC1BD1C0000F9F0 /* CoachContentView.swift in Sources */,
+				35784F381FA6CE1600CFBA32 /* 垂直跑马灯Label.swift in Sources */,
 				3581CBED1EF7DF17000EDCBF /* UIImage+Extension.swift in Sources */,
 				3573EBDE1EFA4D2B00BB22F2 /* ESTabBarItemBadgeView.swift in Sources */,
 				355761F71EC1BD1C0000F9F0 /* PriceLabel.swift in Sources */,
