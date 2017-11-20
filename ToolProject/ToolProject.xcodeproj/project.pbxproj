@@ -47,6 +47,7 @@
 		355762031EC1BD1C0000F9F0 /* PrintModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */; };
 		355762041EC1BD1C0000F9F0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E41EC1BD1C0000F9F0 /* BaseModel.swift */; };
 		355762051EC1BD1C0000F9F0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */; };
+		3565C51A1FC2E3D7000EC3E3 /* Bottom帖子操作栏.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565C5191FC2E3D7000EC3E3 /* Bottom帖子操作栏.swift */; };
 		3569BBBB1EE1469800EAAF66 /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB31EE1469800EAAF66 /* HyPopMenuView.m */; };
 		3569BBBC1EE1469800EAAF66 /* PopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB61EE1469800EAAF66 /* PopMenuButton.m */; };
 		3569BBBD1EE1469800EAAF66 /* PopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3569BBB81EE1469800EAAF66 /* PopMenuModel.m */; };
@@ -124,6 +125,7 @@
 		355761E21EC1BD1C0000F9F0 /* PrintModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintModelList.swift; sourceTree = "<group>"; };
 		355761E41EC1BD1C0000F9F0 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
+		3565C5191FC2E3D7000EC3E3 /* Bottom帖子操作栏.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bottom帖子操作栏.swift"; sourceTree = "<group>"; };
 		3569BBB21EE1469800EAAF66 /* HyPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuView.h; sourceTree = "<group>"; };
 		3569BBB31EE1469800EAAF66 /* HyPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyPopMenuView.m; sourceTree = "<group>"; };
 		3569BBB41EE1469800EAAF66 /* HyPopMenuViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuViewDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		355761B51EC1BD1C0000F9F0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				3565C5181FC2E3D7000EC3E3 /* 底部帖子按钮新版本 */,
 				35784F361FA6CE1600CFBA32 /* 垂直跑马灯Label */,
 				35339F051F57FCAA0091B90A /* ZoomView */,
 				3546AE681F13779D008CB110 /* AdjustBothMarginLabel */,
@@ -442,6 +445,14 @@
 				355761E61EC1BD1C0000F9F0 /* NetWorkManager.swift */,
 			);
 			path = NetWorkManager;
+			sourceTree = "<group>";
+		};
+		3565C5181FC2E3D7000EC3E3 /* 底部帖子按钮新版本 */ = {
+			isa = PBXGroup;
+			children = (
+				3565C5191FC2E3D7000EC3E3 /* Bottom帖子操作栏.swift */,
+			);
+			path = "底部帖子按钮新版本";
 			sourceTree = "<group>";
 		};
 		3569BBB11EE1469800EAAF66 /* HyPopMenu */ = {
@@ -634,6 +645,7 @@
 				3583AC641EDEB2D800C8037F /* HyLoginButton.m in Sources */,
 				3569BBBD1EE1469800EAAF66 /* PopMenuModel.m in Sources */,
 				35339F071F57FCAA0091B90A /* YSZoomView.swift in Sources */,
+				3565C51A1FC2E3D7000EC3E3 /* Bottom帖子操作栏.swift in Sources */,
 				355761F21EC1BD1C0000F9F0 /* CustomNumPick.swift in Sources */,
 				3573EBE11EFA4D2B00BB22F2 /* ESTabBarItemMoreContentView.swift in Sources */,
 				3573EBDB1EFA4D2B00BB22F2 /* ESTabBar.swift in Sources */,
