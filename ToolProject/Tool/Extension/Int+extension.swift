@@ -60,4 +60,16 @@ extension Int {
             return cn
         }
     }
+    
+    var length: Int {
+        get {
+            var tmp = self
+            var result = 1
+            while tmp > 9 {
+                tmp /= 10
+                result += 1
+            }
+            return result
+        }
+    }
 }
