@@ -33,3 +33,11 @@ extension String {
         return rect.height
     }
 }
+
+extension String {
+    subscript(index: Int) -> String {
+        
+        let str = self[self.index(self.startIndex, offsetBy: index)]
+        return String(str)
+    }
+}
